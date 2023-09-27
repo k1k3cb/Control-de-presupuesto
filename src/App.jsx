@@ -1,5 +1,17 @@
+import { useState } from 'react';
+import Header from './components/Header';
+
 const App = () => {
-	return <h1>Núcleo de la aplicación</h1>;
+
+	const [presupuesto, setPresupuesto] = useState(0)
+	return (
+		<div>
+			<Header
+			presupuesto={presupuesto}
+			setPresupuesto={setPresupuesto} />
+			
+		</div>
+	);
 };
 
 export default App;
