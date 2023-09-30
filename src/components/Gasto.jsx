@@ -27,21 +27,8 @@ const diccionarioIconos = {
 	suscripciones: IconoSuscripciones
 };
 
-const Gasto = ({ gasto, setGastoEditar,eliminarGasto }) => {
+const Gasto = ({ gasto }) => {
 	const { nombre, cantidad, categoria, id, fecha } = gasto;
-
-	const leadingActions = () => (
-		<LeadingActions>
-			<SwipeAction onClick={() => setGastoEditar(gasto)}>Editar</SwipeAction>
-		</LeadingActions>
-	);
-	const trailingActions = () => (
-		<TrailingActions>
-			<SwipeAction destructive={true} onClick={() => eliminarGasto(id)}>
-				Eliminar
-			</SwipeAction>
-		</TrailingActions>
-	);
 	return (
 		<SwipeableList>
 			<SwipeableListItem
